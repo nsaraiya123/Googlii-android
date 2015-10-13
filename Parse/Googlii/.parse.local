@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Googlii": {
+      "applicationId": "uBo8cCqkKugrnNNIE9TXAz6cSpX3xLq4mRS3yu4R"
+    },
+    "_default": {
+      "link": "Googlii"
+    }
+  }
+}
