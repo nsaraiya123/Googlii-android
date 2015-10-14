@@ -3,6 +3,7 @@ package com.googlii.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
@@ -62,7 +63,7 @@ public class TabsHeaderActivity extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.htab_toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("IND 298/7 in 50 Overs");
+//        getSupportActionBar().setTitle("IND 298/7 in 50 Overs");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mRevealView = (LinearLayout) findViewById(R.id.reveal_items);
@@ -158,6 +159,11 @@ public class TabsHeaderActivity extends AppCompatActivity {
                 handleRevealViewVisibility(false);
                 return true;
 
+            case R.id.action_add:
+                Intent intent = new Intent(TabsHeaderActivity.this, AddGamesActivity.class);
+                startActivity(intent);
+                return true;
+
             case android.R.id.home:
                 supportFinishAfterTransition();
                 return true;
@@ -180,8 +186,7 @@ public class TabsHeaderActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
 
 
-            SupportAnimator animator =
-                    ViewAnimationUtils.createCircularReveal(mRevealView, cx, cy, 0, radius);
+            SupportAnimator animator = ViewAnimationUtils.createCircularReveal(mRevealView, cx, cy, 0, radius);
             animator.setInterpolator(new AccelerateDecelerateInterpolator());
             animator.setDuration(800);
 

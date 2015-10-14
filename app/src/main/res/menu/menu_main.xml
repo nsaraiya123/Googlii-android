@@ -8,8 +8,13 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_action_add"
+        android:title="Add Games"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/action_clip"
         android:icon="@drawable/ic_action_editor_attach_file"
         android:title="Media"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 </menu>

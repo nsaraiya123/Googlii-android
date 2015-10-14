@@ -14,7 +14,7 @@ import com.googlii.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static final int SPLASH_TIME = 3000;
+    private static final int SPLASH_TIME = 300;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class SplashActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            intent = new Intent(SplashActivity.this, TabsHeaderActivity.class);
+            intent = new Intent(SplashActivity.this, MainTabDispatchActivity.class);
         }
 
         @Override

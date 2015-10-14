@@ -2,27 +2,18 @@
     <string name="app_name">Googlii</string>
     <string name="title_splash_activity">googlii</string>
     <string name="subtitle_splash_activity">Let\'s Play To Win</string>
+    <string name="add_games">Add Games</string>
+    <string name="no_matches_selected">"No Matches Selected"</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_fab_animations">FAB Animation</string>
-    <string name="title_activity_toolbar_test">ToolbarTestActivity</string>
-    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
-    <string name="title_activity_animate_toolbar">Animate Toolbar</string>
-    <string name="title_activity_tab_animation">Tabs Animation</string>
-    <string name="title_activity_sticky_view">StickyViewActivity</string>
 
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_swipe_refresh">Swipe Refresh</string>
-    <string name="title_activity_mini_drawer">Mini Drawer</string>
-    <string name="title_activity_nested_toolbar">Nested Toolbar</string>
     <string name="action_search">Search</string>
-    <string name="action_view_module">View</string>
-    <string name="title_quick_return">Quick Return</string>
-    <string name="title_activity_reveal">Reveal Animation</string>
-    <string name="title_activity_reveal_animation">Reveal Animation</string>
-    <string name="title_activity_launch_screen">LaunchScreenActivity</string>
-    <string name="title_activity_gmail_style">Gmail List</string>
-    <string name="title_activity_tabs_header">Header Tabs</string>
+
+    <string-array name="my_facebook_permissions">
+        <item>public_profile</item>
+        <item>user_friends</item>
+    </string-array>
+    <string name="app_id">694927207308510</string>
 </resources>

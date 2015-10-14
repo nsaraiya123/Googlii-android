@@ -50,7 +50,7 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
 
     @Override
     public VersionViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recyclerlist_item, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.schedulelist_item, viewGroup, false);
         VersionViewHolder viewHolder = new VersionViewHolder(view);
         return viewHolder;
     }
@@ -107,5 +107,4 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
     public void SetOnItemClickListener(final OnItemClickListener itemClickListener) {
         this.clickListener = itemClickListener;
     }
-
 }

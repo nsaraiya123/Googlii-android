@@ -11,6 +11,9 @@
     <color name="accent_700">#C2185B</color>
     <color name="black_trans80">#14000000</color>
 
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#727272</color>
+
 
     <color name="blue_grey">#455A64</color>
     <color name="red">#F44336</color>

@@ -302,12 +302,18 @@ function updateLiveScoreForMatch(liveMatch, status)
                             scoreDetails.set("inning", inning);
                             scoreDetails.set("team", teamPlayingNowName);
                             scoreDetails.set("over", newBallFromLitz.over);
-                            var runs = Number(newBallFromLitz.runs);
-                            if (runs != "NaN")
-                                scoreDetails.set("runs", newBallFromLitz.runs);
-                            var wicket = Number(newBallFromLitz.wicket);
-                            if (wicket != "NaN")
-                                scoreDetails.set("wickets", wicket);
+                            scoreDetails.set("ball", newBallFromLitz.ball)
+                            var newBall = Number(newBallFromLitz.ball);
+                            if (newBall != "NaN" && newBall != null)
+                                scoreDetails.set("ball", newBall);
+//                            var runs = Number(newBallFromLitz.team.runs);
+//                            if (runs != "NaN")
+//                                scoreDetails.set("runs", newBallFromLitz.team.runs);
+//                            var wicket = Number(newBallFromLitz.wicket);
+//                            if (wicket != "NaN")
+//                                scoreDetails.set("wickets", wicket);
+                                scoreDetails.set("runs", newBallFromLitz.team.runs);
+                                scoreDetails.set("wickets", newBallFromLitz.team.wicket);
                             newBallArray.push(scoreDetails);
                         }
                     }

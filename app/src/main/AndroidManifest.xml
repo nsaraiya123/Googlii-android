@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.googlii" >
 
-    <application
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application android:name=".application.GoogliiAplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,10 +17,48 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.MainTabDispatchActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+        <activity android:name=".activities.AddGamesActivity"
+            android:label="@string/add_games"
+            android:launchMode="singleTop" />
         <activity
             android:name=".activities.TabsHeaderActivity"
-            android:label="@string/title_activity_tabs_header"
             android:theme="@style/MyTheme.Detail" />
+        <activity
+            android:name="com.parse.ui.ParseLoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"
+                android:value="true"/>
+            <meta-data
+                android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_EMAIL_AS_USERNAME"
+                android:value="true"/>
+            <meta-data
+                android:name="com.parse.ui.ParseLoginActivity.FACEBOOK_LOGIN_ENABLED"
+                android:value="true"/>
+            <!-- We reference a string-array resource here, so we must use android:resource -->
+            <meta-data
+                android:name="com.parse.ui.ParseLoginActivity.FACEBOOK_LOGIN_PERMISSIONS"
+                android:resource="@array/my_facebook_permissions"/>
+        </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="uBo8cCqkKugrnNNIE9TXAz6cSpX3xLq4mRS3yu4R" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="UW7qGls2iHDKJFI4L986F2kskngtrP4ih4OmLorL" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id"/>
     </application>
 
 </manifest>
